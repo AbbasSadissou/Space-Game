@@ -17,10 +17,7 @@ steps:
 
 - task: NuGetCommand@2
 - task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-  inputs:
-    restoreSolution: '$(solution)'
+
 
 - task: VSBuild@1
   inputs:
