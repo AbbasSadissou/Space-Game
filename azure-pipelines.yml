@@ -18,6 +18,9 @@ steps:
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
   inputs:
     restoreSolution: '$(solution)'
 
