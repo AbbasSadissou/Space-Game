@@ -12,6 +12,14 @@ pool:
 variables:
   buildConfiguration: 'Release'
 
+
 steps:
-  - script: dotnet build --configuration $(build configuration)
-    displayName: 'dotnet build $(buildConfiguration)'
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+
+
+
+- task: VSTest@2
+  inputs:
+    platform: '$(buildPlatform)'
